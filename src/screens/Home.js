@@ -234,11 +234,29 @@ const Home = () => {
 
   const renderButtonFilter = () => {
     return (
-      <TouchableOpacity
-        style={[styles.buttonSearchStyle, {marginVertical: HEIGHT * 0.02}]}
-        onPress={handleOpenModalFilter}>
-        <Icon name="filter-variant" size={HEIGHT * 0.03} color={colors.white} />
-      </TouchableOpacity>
+      <View
+        style={{
+          flexDirection: 'row',
+          justifyContent: 'space-between',
+          alignItems: 'center',
+          paddingHorizontal: HEIGHT * 0.001,
+        }}>
+        <TouchableOpacity
+          style={[styles.buttonSearchStyle, {marginVertical: HEIGHT * 0.02}]}
+          onPress={handleOpenModalFilter}>
+          <Icon
+            name="filter-variant"
+            size={HEIGHT * 0.03}
+            color={colors.white}
+          />
+        </TouchableOpacity>
+
+        <TouchableOpacity
+          style={[styles.buttonSearchStyle, {marginLeft: WIDTH * 0.03}]}
+          onPress={() => navigate('AddItem')}>
+          <Icon name="plus" size={HEIGHT * 0.03} color={colors.white} />
+        </TouchableOpacity>
+      </View>
     );
   };
 
@@ -291,6 +309,7 @@ const Home = () => {
       </ModalCustom>
     );
   };
+
   return (
     <Template>
       {renderSearch()}

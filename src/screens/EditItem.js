@@ -24,6 +24,7 @@ const EditItem = ({route}) => {
   const handleUpdateItem = async () => {
     try {
       const today = moment().format('DD-MM-YYYY');
+      console.log(`TYPE OF ${typeof today}`);
       const data = {
         nama_barang: namaBarang,
         stok: stok,
