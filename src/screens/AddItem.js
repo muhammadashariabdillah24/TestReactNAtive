@@ -7,6 +7,7 @@ import TextInputCustom from '../components/TextInputCustom';
 import moment from 'moment';
 import {addItem} from '../services/ItemConsume/addItem';
 import {HEIGHT, WIDTH} from '../utils/dimension';
+import {wait} from '../utils/timeOut';
 
 const NAMA_BARANG = 'Nama Barang';
 const STOK = 'Stok';
